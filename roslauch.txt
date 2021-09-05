@@ -1,0 +1,9 @@
+DRI_PRIME=1 roslaunch ignition_playground block.launch
+roslaunch ignition_playground offline_team.launch
+roslaunch ignition_navigation bringup.launch
+rosrun rqt_reconfigure rqt_reconfigure
+rostopic pub /start std_msgs/Empty "{}" --once
+
+DRI_PRIME=1 roslaunch ignition_playground block.launch world_no:=6
+
+
